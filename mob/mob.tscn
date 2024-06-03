@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cc4u2bgseqpyh"]
+
+[ext_resource type="Script" path="res://mob/mob.gd" id="1_r37sy"]
+[ext_resource type="Texture2D" uid="uid://djcyx7s1plyl7" path="res://icon.svg" id="2_i6tb4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1tyd"]
+size = Vector2(117, 117)
+
+[node name="MOB" type="Area2D"]
+script = ExtResource("1_r37sy")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(-10, -10)
+
+[node name="SquareA" type="Sprite2D" parent="."]
+position = Vector2(-65, -64)
+texture = ExtResource("2_i6tb4")
+
+[node name="SquareAA" type="CollisionShape2D" parent="."]
+position = Vector2(-66, -64)
+shape = SubResource("RectangleShape2D_d1tyd")
+disabled = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
