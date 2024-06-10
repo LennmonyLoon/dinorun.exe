@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cc4u2bgseqpyh"]
+[gd_scene load_steps=6 format=3 uid="uid://cc4u2bgseqpyh"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_r37sy"]
-[ext_resource type="Texture2D" uid="uid://djcyx7s1plyl7" path="res://icon.svg" id="2_i6tb4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1tyd"]
-size = Vector2(117, 117)
+[ext_resource type="Texture2D" uid="uid://dirj7qsljxbwi" path="res://INFORMATICA - OBSTACULOS/raton.png" id="2_wbisc"]
+[ext_resource type="Texture2D" uid="uid://bqf0mg0aala2e" path="res://INFORMATICA - OBSTACULOS/Piedra.png" id="3_3ua8g"]
+[ext_resource type="Texture2D" uid="uid://h65hm0iv4mug" path="res://INFORMATICA - OBSTACULOS/caracoloide.png" id="4_qgdr8"]
+[ext_resource type="Texture2D" uid="uid://dhtubj43gll21" path="res://INFORMATICA - OBSTACULOS/apple.png" id="5_frwe8"]
 
 [node name="MOB" type="Area2D"]
 script = ExtResource("1_r37sy")
@@ -13,12 +13,68 @@ script = ExtResource("1_r37sy")
 position = Vector2(-10, -10)
 
 [node name="SquareA" type="Sprite2D" parent="."]
-position = Vector2(-65, -64)
-texture = ExtResource("2_i6tb4")
+visible = false
+position = Vector2(-65, -104.25)
+scale = Vector2(7.75, 7.71875)
+texture = ExtResource("2_wbisc")
 
-[node name="SquareAA" type="CollisionShape2D" parent="."]
-position = Vector2(-66, -64)
-shape = SubResource("RectangleShape2D_d1tyd")
+[node name="CircleA" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+texture = ExtResource("3_3ua8g")
+
+[node name="TriangleA" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+texture = ExtResource("4_qgdr8")
+
+[node name="QQQ1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+texture = ExtResource("5_frwe8")
+
+[node name="QQQ2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+texture = ExtResource("4_qgdr8")
+
+[node name="CircleAA" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+polygon = PackedVector2Array(7.87097, 5.95952, 5.67742, 7.90284, -5.03226, 7.90284, -7.35484, 5.95952, -7.87097, -1.16599, -5.54839, -4.14575, -3.35484, -6.21862, 2.83871, -6.08907, 7.48387, -1.4251)
+disabled = true
+
+[node name="SquareAA" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-65, -104.25)
+scale = Vector2(7.75, 7.71875)
+polygon = PackedVector2Array(5.41936, 7.41701, -7.6129, 7.41701, -6.83871, -3.9838, -0.387095, -5.79757, 7.35484, -5.53846, 7.74194, -0.0971642)
+disabled = true
+
+[node name="TriangleAA" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+polygon = PackedVector2Array(6.58065, 5.82996, 4.25807, 8.03239, -3.22581, 7.90284, -6.83871, 5.4413, -8, 0, -6.58064, 1.29555, -6.19355, -0.518219, -4.12903, -0.906882, -2.96774, -2.07288, -0.903225, -4.0162, 3.6129, -4.0162, 6.70968, -3.23887, 8, -1.81377, 8.12903, 4.0162)
+disabled = true
+
+[node name="QQQA1" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+polygon = PackedVector2Array(5.54839, -1.4251, 5.93548, 3.36842, 4.3871, 5.57085, -3.35484, 5.95952, -5.41935, 4.0162, -5.54839, -0.518218, -4.3871, -2.59109, -2.19355, -2.8502, -0.774193, -5.57085, 1.80645, -5.4413, 3.09678, -3.10931)
+disabled = true
+
+[node name="QQQA2" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(89, -105)
+scale = Vector2(7.75, 7.71875)
+polygon = PackedVector2Array(7.6129, 0.129555, 6.32258, 6.60729, 2.58065, 7.64373, -3.48387, 7.51417, -7.09677, 4.0162, -7.6129, 0.259109, -5.67742, 0.129555, -3.6129, -1.55466, -0.387095, -3.49798, 3.35484, -3.75709, 6.19355, -2.8502)
 disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

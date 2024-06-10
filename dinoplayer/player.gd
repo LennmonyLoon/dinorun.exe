@@ -26,3 +26,5 @@ func _physics_process(delta):
 		velocity.y += GRAVITY * delta
 		$CrouchCollisionShape2D.disabled = !$CollisionShape2D.disabled
 		move_and_slide()
+	else:
+		$AnimatedSprite2D.stop()

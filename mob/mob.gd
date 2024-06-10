@@ -3,11 +3,20 @@ extends Area2D
 signal hit
 
 func _ready():
+	GHUD.mob_counter = GHUD.mob_counter + 1
 	var collisions = [
 		$SquareAA,
+		$CircleAA,
+		$TriangleAA,
+		$QQQA1,
+		$QQQA2,
 	]
 	var sprites = [
 		$SquareA,
+		$CircleA,
+		$TriangleA,
+		$QQQ1,
+		$QQQ2,
 	]
 	var random_int = randi() % collisions.size()
 	var selected_collisions = collisions[random_int]
@@ -19,6 +28,8 @@ func _ready():
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited():
+	if GHUD.mob_counter > 0:
+		GHUD.mob_counter = GHUD.mob_counter - 1
 	queue_free()
 
 
