@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cc4u2bgseqpyh"]
+[gd_scene load_steps=7 format=3 uid="uid://cc4u2bgseqpyh"]
 
 [ext_resource type="Script" path="res://mob/mob.gd" id="1_r37sy"]
 [ext_resource type="Texture2D" uid="uid://dirj7qsljxbwi" path="res://INFORMATICA - OBSTACULOS/raton.png" id="2_wbisc"]
 [ext_resource type="Texture2D" uid="uid://bqf0mg0aala2e" path="res://INFORMATICA - OBSTACULOS/Piedra.png" id="3_3ua8g"]
 [ext_resource type="Texture2D" uid="uid://h65hm0iv4mug" path="res://INFORMATICA - OBSTACULOS/caracoloide.png" id="4_qgdr8"]
 [ext_resource type="Texture2D" uid="uid://dhtubj43gll21" path="res://INFORMATICA - OBSTACULOS/apple.png" id="5_frwe8"]
+[ext_resource type="Texture2D" uid="uid://d2q0mdkqbrio4" path="res://INFORMATICA - OBSTACULOS/radio.png" id="6_tfosb"]
 
 [node name="MOB" type="Area2D"]
+position = Vector2(12, 495)
 script = ExtResource("1_r37sy")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
@@ -40,7 +42,7 @@ texture = ExtResource("5_frwe8")
 visible = false
 position = Vector2(89, -105)
 scale = Vector2(7.75, 7.71875)
-texture = ExtResource("4_qgdr8")
+texture = ExtResource("6_tfosb")
 
 [node name="CircleAA" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -74,7 +76,7 @@ disabled = true
 visible = false
 position = Vector2(89, -105)
 scale = Vector2(7.75, 7.71875)
-polygon = PackedVector2Array(7.6129, 0.129555, 6.32258, 6.60729, 2.58065, 7.64373, -3.48387, 7.51417, -7.09677, 4.0162, -7.6129, 0.259109, -5.67742, 0.129555, -3.6129, -1.55466, -0.387095, -3.49798, 3.35484, -3.75709, 6.19355, -2.8502)
+polygon = PackedVector2Array(7.6129, 0.259109, 6.96774, 6.73684, -2.06452, 6.8664, -7.09677, 6.8664, -7.09677, 4.0162, -7.6129, 0.259109, -6.06452, -1.29555, -3.6129, -1.55466, -0.387096, -2.07288, 2.45161, -2.46154, 4.51613, -5.70041)
 disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
