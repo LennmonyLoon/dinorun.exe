@@ -40,7 +40,7 @@ texture = ExtResource("5_frwe8")
 
 [node name="QQQ2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(89, -105)
+position = Vector2(83, -266)
 scale = Vector2(7.75, 7.71875)
 texture = ExtResource("6_tfosb")
 
@@ -74,9 +74,9 @@ disabled = true
 
 [node name="QQQA2" type="CollisionPolygon2D" parent="."]
 visible = false
-position = Vector2(89, -105)
+position = Vector2(86, -264)
 scale = Vector2(7.75, 7.71875)
-polygon = PackedVector2Array(7.6129, 0.259109, 6.96774, 6.73684, -2.06452, 6.8664, -7.09677, 6.8664, -7.09677, 4.0162, -7.6129, 0.259109, -6.06452, -1.29555, -3.6129, -1.55466, -0.387096, -2.07288, 2.45161, -2.46154, 4.51613, -5.70041)
+polygon = PackedVector2Array(6.83871, 0.259109, 6.96774, 6.73684, -2.06452, 6.8664, -7.09677, 6.8664, -7.09677, 4.0162, -7.6129, 0.259109, -6.06452, -1.29555, -3.35484, -1.03644, -2.70968, -2.46154, -0.387096, -2.07288, 2.45161, -2.46154, 3.74194, -3.23887, 4.51613, -5.70041, 5.54839, -3.10931, 5.93548, -0.388664)
 disabled = true
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

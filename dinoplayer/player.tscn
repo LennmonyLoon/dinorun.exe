@@ -150,7 +150,7 @@ animations = [{
 size = Vector2(132, 148)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_boq70"]
-size = Vector2(155, 111.25)
+size = Vector2(155, 121.25)
 
 [node name="Player" type="CharacterBody2D" groups=["dinosaurio"]]
 script = ExtResource("1_blojf")
@@ -158,7 +158,7 @@ script = ExtResource("1_blojf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_wincg")
-animation = &"run"
+animation = &"crouch"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2, -2)
@@ -166,7 +166,7 @@ shape = SubResource("RectangleShape2D_br7pn")
 debug_color = Color(0, 0.540996, 0.955207, 0.42)
 
 [node name="CrouchCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(9.5, 17.625)
+position = Vector2(9.5, 12.625)
 shape = SubResource("RectangleShape2D_boq70")
 debug_color = Color(0.770413, 0.271864, 0.871616, 0.42)
 
